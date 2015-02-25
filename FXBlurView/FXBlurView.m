@@ -534,6 +534,7 @@
     }
     UIGraphicsBeginImageContextWithOptions(size, NO, scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
     CGContextTranslateCTM(context, -bounds.origin.x, -bounds.origin.y);
     
     NSArray *hiddenViews = [self prepareUnderlyingViewForSnapshot];
